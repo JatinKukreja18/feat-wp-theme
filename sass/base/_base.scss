@@ -1,0 +1,311 @@
+/* Typography
+--------------------------------------------- */
+@import "typography/typography";
+:root,body,html{
+    --bs-gutter-y: 2rem;
+    --bs-gutter-x: 1.2rem;
+    --plyr-color-main: #000;
+}
+// body global level / root
+body,html{
+	// background-color: #000;
+	font-family: 'Neue Haas';
+	// font-weight: 300;
+    font-size: 10px;
+    &.ham-opened{
+        overflow: hidden;
+        height: 100vh;
+        max-height: -webkit-fill-available;
+    }
+}
+// input.orig {
+//     border-radius: 0;
+// }
+
+// input.orig[type="search"] {
+//     -webkit-appearance: none !important;
+//     -webkit-border-radius:0px;
+//     border-radius: 0;
+// }
+// input.orig::-webkit-textfield-decoration-container,
+// input.orig[type="search"]::-webkit-search-decoration {
+//     -webkit-appearance: none !important;
+//     background-color: red;
+//     border-radius: 0 !important;
+//     -webkit-border-radius:0px !important; 
+// }
+@font-face {
+    font-family: "NeueHaasDisplayRoman";
+    src: url("./fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayThin.woff");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NeueHaasDisplayXThin";
+    src: url("./fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayXXThin.woff");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NeueHaasDisplayBold";
+    src: url("./fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayBold.woff");
+    font-weight: 100;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: none;
+}
+body {
+    color: #000;
+}
+body,html {
+    overflow: auto;
+    /* this will hide the scrollbar in mozilla based browsers */
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+    /* this will hide the scrollbar in internet explorers */
+    -ms-overflow-style: none;
+    scrollbar-color: transparent transparent;
+
+  }
+
+  /* this will hide the scrollbar in webkit based browsers - safari, chrome, etc */
+body::-webkit-scrollbar { 
+width: 0 !important;
+display: none; 
+}
+
+// inputs
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $color__text-input;
+	border: 1px solid $color__border-input;
+	border-radius: 3px;
+	padding: 3px;
+
+	&:focus {
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+textarea {
+	width: 100%;
+}
+
+
+// buttons
+button.feat-button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] 
+{
+	// border: 1px solid;
+	// border-color: $color__border-button;
+	// border-radius: 3px;
+	font-family: 'Neue Haas';
+	border: none;
+	background: $color__background-button;
+	color: #fff;
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+	min-width: 150px;
+	height: 46px;
+	padding: 13px 65px;
+	font-size: 18px;
+	font-weight: 400;
+	background-color: #000000;
+	cursor: pointer;
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+// links
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+// Images
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
+}
+
+figure {
+	margin:0 0 10px 0; // Extra wide images within figure tags don't overflow the content area.
+}
+
+// Headings
+h1{
+    font-size: 4.2rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+h2{
+  font-size: 3.6rem;
+  font-weight: 100;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+h3{
+    font-size: 3.2rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+h4{
+    font-size: 2.4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+h1,h2,h3,h4{
+    margin-top: 0;
+    b,strong{
+        font-weight: bold;
+    }
+}
+a,a:hover,a:focus,a:visited{
+    color: #000;
+}
+h5,p,.feat-text{
+    font-size: 1.6rem;
+    margin-top: 0;
+    strong,b{
+        font-weight: 500;
+    }
+}
+.site-main{
+    min-height: calc(100vh - 60px);
+
+    .minH{
+        min-height: calc(100vh - 60px);
+    }
+    &.top-spaced{
+        margin-top: 82px;
+    }
+}
+
+
+.container{
+    padding-left: 11px;
+    padding-right: 11px;
+    &.full{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+//wp plyr
+.plyr__video-embed, .plyr__video-wrapper--fixed-ratio{
+    margin-bottom: 10px;
+    padding-bottom: calc(56.25% + 10px);
+    // overflow: hidden;
+}
+.wplyr-player > .plyr{
+    border-radius: 0;
+}
+.back-to-top{
+    position: fixed;
+    right: 15px;
+    bottom: 36px;
+    z-index: 99;
+    height: 20px;
+    display: none;
+    cursor: pointer;
+    box-sizing: content-box;
+    padding: 5px;
+    &.active{
+        display: inline-block;
+    }
+    img{
+        transform: rotate(-90deg);
+        height: 100%;
+    }
+}
+@media  (max-width:767px) {
+    .back-to-top{
+        height: 16px;
+    }
+    .site-main{
+        .minH{
+            min-height: calc(100vh - 100px);
+        }
+        &.models-page,&.single-project-page,&.projects-page{
+            margin-top: 110px;
+        }
+    }
+    h4{
+        font-size: 1.8rem;
+    }
+    h1{
+        font-size: 3.2rem;
+    }
+    h3,h2{
+        font-size: 2.4rem;
+    }
+}

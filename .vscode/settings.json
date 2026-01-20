@@ -1,0 +1,7 @@
+{
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "compile-hero.disable-compile-files-on-did-save-code": false
+}

@@ -1,0 +1,170 @@
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
+
+	&:focus {
+		background-color: $color__background-screen;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		clip-path: none;
+		color: $color__text-screen;
+		display: block;
+		font-size: 0.875rem;
+		font-weight: 700;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; // Above WP toolbar.
+	}
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+.alignleft {
+
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+
+	@include center-block;
+
+	margin-bottom: 1.5em;
+}
+
+
+.uppercase{
+    text-transform: uppercase;
+}
+.full-width{
+    width: 100%;
+}
+
+.mb20{
+    margin-bottom: 20px;
+}
+.mb50{
+    margin-bottom: 50px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.ml20{
+    margin-left: 20px;
+}
+.ml-auto{
+    margin-left: auto;
+}
+
+.desk-only{
+    display: block;
+}
+.mob-only{
+    display: none;
+}
+/* aspect ratio containers*/.aspect-4-3{
+    position: relative;
+    padding-top: 133.333%;
+}
+.aspect-3-4{
+    position: relative;
+    padding-top: 75%;
+}
+.aspect-4-5{
+    position: relative;
+    padding-top: 80%;
+}
+.aspect-5-4{
+    position: relative;
+    padding-top: 125%;
+}
+.aspect-16-9{
+    position: relative;
+	padding-top: 56.25%;
+}
+.aspect-9-16{
+    position: relative;
+	padding-top: 177.77%;
+}
+.aspect-16-10{
+    position: relative;
+	padding-top: 160%;
+}
+.aspect-10-16{
+    position: relative;
+	padding-top: 62.5%;
+}
+
+.aspect-3-4,.aspect-4-3,.aspect-4-5,.aspect-5-4,.aspect-16-9,.aspect-9-16,.aspect-16-10,.aspect-10-16{
+    img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.aspect-1-1{
+    position: relative;
+    padding-top: 100%;
+}
+.aspect-1-1 img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit:cover;
+}
+
+
+@media screen and (max-width:767px) {
+    .desk-only{
+        display: none;
+    }
+    .mob-only{
+        display: block;
+    }
+    .aspect-4-3{
+        padding-top: 116.66%;
+    }
+    .aspect-4-3 img{
+        width: 100%;
+    }
+}

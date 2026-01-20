@@ -1,0 +1,354 @@
+.single-talents-page{
+    min-height: calc(100vh - 70px);
+    .blocks-gallery-item{
+        // width: 100%;
+        margin-bottom: 0;
+    }
+    .blocks-gallery-grid{
+        // display: block;
+        width: 100%;
+    }
+}
+.talents-interior {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    article{
+        width: 100%;
+        position: relative;
+    }
+    iframe,video{
+        width: 100%;
+    }
+    h1,h2,h3,p{
+        margin-bottom: 1rem;
+    }
+    .portfolio-banner-link{
+        font-size: 2.4rem;
+        text-decoration: underline;
+    }
+    .wp-block-jknf-blocks-portfolio.full-banner{
+        margin: 0;
+        height: 100vh;
+        max-height: 100vh;
+        >div,.talents-image-container{
+            height: 100%;
+        }
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .talents-image-container{
+        line-height: 0;
+    }
+}
+.talent-sticky-details{
+    position: fixed;
+    bottom: 10px;
+    z-index: 1;
+    width: auto;
+    left: 15px;
+    bottom: 20px;
+    a{
+        text-decoration: underline;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        line-height: 1;
+        margin-right: 20px;
+        img{
+            width: 14px;
+            margin-left: 8px;
+        }
+    }
+    &.abs{
+        position: absolute;
+    }
+}
+.talent-banner{
+    position: relative;
+    z-index:1;
+}
+.talent-interior-main{
+    min-height: 100vh;
+}
+.talent-tags{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
+    li{
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+        &.active{
+            font-weight: 600;
+        }
+    }
+}
+.talent-about{
+    display: none;
+}
+.talent-about.active{
+    position: absolute;
+    display: block;
+    background: #fff;
+    padding: 20px;
+    bottom: calc(100% + 30px);
+    width: 50vw;
+    font-size: 14px;
+    z-index: 9;
+    border: 1px solid #ccc;
+}
+.talents-video{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
+.talents-video-wrapper{
+    padding-top: 80%;
+    position: relative;
+}
+.talents-stats{
+    font-size: 16px;
+}
+// .talents-stats b{
+//     font-family: "NeueHaasDisplayBold";
+// }
+.talents-interior .right-half img{
+    margin-bottom: 10px;
+}
+.talents-social{
+    margin-bottom: 20px;
+}
+.talents-social a{
+    font-size: 16px;
+    color: #000;
+}
+.talents-social a img{
+    margin-left:10px
+}
+
+// talents grid page
+.no-results{
+    min-height: 70vh;
+    margin-bottom: 82px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 42px;
+    color: #cccccc;
+    font-weight: 100;
+}
+.talents-column.talents-portfolio-column{
+    position:relative;
+    padding-top: 80%;
+    margin-bottom: 10px;
+    // background-color: #ccc;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        object-position: top;
+        left: 0;
+    }
+    // height: calc(100% - 10px);
+}
+.talents-column{
+    position:relative;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    height: calc(100% - 10px);
+
+    img{
+        width: 100%;
+        opacity: 0;
+        transition: 1s;
+        transition-delay:.5s ;
+        background-color: #ddd;
+        // transform: translate(0,30px);
+        &.lazyloaded{
+            opacity: 1;
+            // transform: translate(0,0);
+        }
+    }
+    .talents-column-content{
+        padding: 25px;
+        top:0;
+        left:0;
+        position: absolute;
+        background-color: rgb(86, 87, 230);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-self: flex-start;
+        opacity:0;
+        // pointer-events: none;
+        transition: .4s;
+        text-decoration: none;
+    }
+    &.active,&:hover{
+        .talents-column-content{
+            opacity: 1;
+        }
+    }
+}
+.wp-block-jknf-blocks-portfolio.active a .portfolio-title{
+    opacity: 1;
+}
+@media screen and (max-width:767px) {
+    .talent-sticky-details a{
+        margin-bottom: 15px;
+        margin-right: 15px;
+    }
+    .talent-tags {
+        margin-top: 5px;
+        li{
+           margin-bottom: 15px;
+        }
+    }
+    .talents-interior{
+        .wp-block-jknf-blocks-featured-portfolio.full-banner{
+            height: auto;
+            width: calc(100%);
+            padding: 0 15px !important;
+        }
+        .wp-block-jknf-blocks-featured-portfolio {        
+            .talents-image-container{
+                position: relative;
+
+                &:hover{
+                    .talents-banner-content{
+                        .portfolio-banner-title{
+                            opacity: 1;
+                        }
+                        .portfolio-banner-link{
+                            display: block;
+                        }
+                    }
+                }
+                .talents-banner-content{
+                    width: 100%;
+                    height: 100%;
+                    .tag{
+                        display: none;
+                    }
+                    .portfolio-banner-title{
+                        position: absolute;
+                        background: #ffffff;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;    
+                        color: black;
+                        padding-left: 20px;
+                        opacity: 0;
+                        transition: .3s;
+                    }
+                    .portfolio-banner-link{
+                        background: transparent;
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        opacity: 0;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    // .wp-block-jknf-blocks-featured-portfolio.full-banner{
+
+    // }
+    .talent-about,.talent-about.active{
+        top: 40px;
+        bottom: unset;
+        width: calc(100vw - 30px);
+    }
+    .talent-detail-container{
+            padding: 25px 15px 25px 15px;
+            position: relative;
+            margin-top: 50%; 
+            width: 100%;
+            z-index: 3;
+            .talent-sticky-details{
+                position: relative;
+                left: 0;
+                bottom: unset;
+            }
+    }
+    .wp-block-jknf-blocks-featured-portfolio.is-style-left-aligned-banner-light .talents-banner-content{
+        bottom: 50px;
+        left: 15px;
+        width: calc(100% - 30px);
+    }
+    .wp-block-jknf-blocks-featured-portfolio .talents-banner-content{
+        padding: 50px 15px;
+        bottom: 0;
+    }
+    .wp-block-jknf-blocks-featured-portfolio .tag{
+        font-size: 18px;
+        line-height: 18px;
+        padding-left: 24px;
+        font-weight: 300;
+        &:before{
+            width: 13px;
+            height: 13px;            
+            // left: 40px;
+        }
+    }
+    .talents-interior{
+        display: table;
+    }
+    .talents-interior .right-half {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+    }
+    .talents-interior .left-half {
+        position: relative;
+        width: 100%;
+    }
+    .talents-interior .left-half article{
+        padding: 25px 15px 25px 15px;
+        position: relative;
+        margin-top: 50%;
+        width:100%;
+    }
+    .talents-interior article{
+        position: relative;
+    }
+    header.secondary{
+        width: 100%;
+    }
+    .talents-name{
+        font-size: 26px;
+        font-weight: 100;
+    }
+    header.secondary{
+        background-color: #fff;
+        padding: 20px 15px;
+    }
+    header.secondary .logo img{
+        width: 62px;
+    }
+}
