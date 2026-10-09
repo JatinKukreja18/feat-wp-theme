@@ -4842,11 +4842,15 @@ footer .social-icons {
 }
 .projects-column img {
   width: 100%;
-  opacity: 0;
+  -webkit-transition: 1s;
   transition: 1s;
+  -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-  background-color: #ccc;
+  background-color: #ddd;
   transform: translate(0, 30px);
+}
+.projects-column img.lazyload {
+  opacity: 0;
 }
 .projects-column img.lazyloaded {
   opacity: 1;
