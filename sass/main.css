@@ -5425,6 +5425,7 @@ footer .social-icons {
   margin-bottom: 10px;
   background-color: #ddd;
   height: calc(100% - 10px);
+  overflow: hidden;
 }
 
 .projects-column img {
@@ -5434,14 +5435,14 @@ footer .social-icons {
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
   background-color: #ddd;
-  transform: translate(0, 30px);
+  transform: scale(1.05);
 }
 .projects-column img.lazyload {
   opacity: 0;
 }
 .projects-column img.lazyloaded {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: scale(1);
 }
 .projects-column .projects-column-content {
   padding: 25px;

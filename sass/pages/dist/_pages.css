@@ -1329,21 +1329,26 @@
 .projects-column {
   position: relative;
   margin-bottom: 10px;
+  background-color: #ddd;
   height: calc(100% - 10px);
+  overflow: hidden;
 }
+
 .projects-column img {
   width: 100%;
+  -webkit-transition: 1s;
   transition: 1s;
+  -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-  background-color: #ccc;
-  transform: translate(0, 30px);
+  background-color: #ddd;
+  transform: scale(1.05);
 }
 .projects-column img.lazyload {
   opacity: 0;
 }
 .projects-column img.lazyloaded {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: scale(1);
 }
 .projects-column .projects-column-content {
   padding: 25px;
