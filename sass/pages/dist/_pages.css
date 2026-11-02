@@ -96,7 +96,6 @@
 
 .models-column img {
   width: 100%;
-  opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transition-delay: 0.3s;
@@ -1063,7 +1062,6 @@
 
 .talents-column img {
   width: 100%;
-  opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transition-delay: 0.5s;
