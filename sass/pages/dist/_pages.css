@@ -89,19 +89,29 @@
 .models-column {
   position: relative;
   margin-bottom: 10px;
+  background-color: #ddd;
   height: calc(100% - 10px);
+  overflow: hidden;
 }
+
 .models-column img {
   width: 100%;
   opacity: 0;
+  -webkit-transition: 1s;
   transition: 1s;
+  -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
-  background-color: #ccc;
-  transform: translateY(30px);
+  background-color: #ddd;
+  transform: scale(1.05);
 }
+
+.models-column img.lazyload {
+  opacity: 0;
+}
+
 .models-column img.lazyloaded {
   opacity: 1;
-  transform: translateY(0px);
+  transform: scale(1);
 }
 .models-column .models-column-content {
   padding: 25px;
@@ -1046,20 +1056,29 @@
 .talents-column {
   position: relative;
   margin-bottom: 10px;
+  background-color: #ddd;
   height: calc(100% - 10px);
+  overflow: hidden;
 }
+
 .talents-column img {
   width: 100%;
   opacity: 0;
+  -webkit-transition: 1s;
   transition: 1s;
+  -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-  background-color: #ccc;
-  transform: translate(0, 30px);
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+.talents-column img.lazyload {
+  opacity: 0;
 }
 .talents-column img.lazyloaded {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: scale(1);
 }
+
 .talents-column .talents-column-content {
   padding: 25px;
   top: 0;
